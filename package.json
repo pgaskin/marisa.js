@@ -1,10 +1,16 @@
 {
   "name": "marisa-trie-wasm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Patrick Gaskin",
   "license": "MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)",
   "description": "marisa-trie browser/node wasm bindings",
-  "keywords": ["marisa-trie",  "libmarisa", "trie", "bindings", "wasm"],
+  "keywords": [
+    "marisa-trie",
+    "libmarisa",
+    "trie",
+    "bindings",
+    "wasm"
+  ],
   "homepage": "https://github.com/pgaskin/marisa.js",
   "bugs": {
     "url": "https://github.com/pgaskin/marisa.js/issues"
