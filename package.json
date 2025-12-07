@@ -1,0 +1,29 @@
+{
+  "name": "marisa-trie-wasm",
+  "version": "0.0.1",
+  "author": "Patrick Gaskin",
+  "license": "MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)",
+  "description": "marisa-trie browser/node wasm bindings",
+  "keywords": ["marisa-trie",  "libmarisa", "trie", "bindings", "wasm"],
+  "homepage": "https://github.com/pgaskin/marisa.js",
+  "bugs": {
+    "url": "https://github.com/pgaskin/marisa.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:pgaskin/marisa.js"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node src/fetch.js github.com/pgaskin/go-marisa v1.0.2 h1:m8MsdiHsWFl5FeaIhcQU8ubejQyMSVakE/7uBYLOeMY= && tsc && esbuild --bundle --format=esm --platform=neutral --tsconfig=tsconfig.json --target=es2022 --sourcemap --loader:.wasm=file --outfile=dist/index.js --external:node:* src/index.ts",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "esbuild-wasm": "0.27.1",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">= 22"
+  }
+}
