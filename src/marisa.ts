@@ -47,7 +47,7 @@ const module = compile(new URL(wasm, import.meta.url))
 
 async function compile(url: URL) {
   // @ts-expect-error
-  if (typeof process !== "undefined" && process.versions != null && process.versions.node != null) {
+  if (typeof window === 'undefined' && typeof process !== "undefined" && process.versions != null && process.versions.node != null && url.protocol === 'file:') {
     // @ts-expect-error
     const { readFileSync } = await import('node:fs')
     // @ts-expect-error
