@@ -1,7 +1,7 @@
 # marisa-trie-wasm
 
 ![NPM Version](https://img.shields.io/npm/v/marisa-trie-wasm)
-[![Test](https://github.com/pgaskin/go-marisa/actions/workflows/test.yml/badge.svg)](https://github.com/pgaskin/go-marisa/actions/workflows/test.yml)
+[![Test](https://github.com/pgaskin/marisa.js/actions/workflows/test.yml/badge.svg)](https://github.com/pgaskin/marisa.js/actions/workflows/test.yml)
 [![Attest marisa build](https://github.com/pgaskin/go-marisa/actions/workflows/attest.yml/badge.svg)](https://github.com/pgaskin/go-marisa/actions/workflows/attest.yml)
 
 Modern JavaScript browser/node bindings for [marisa-trie](https://github.com/s-yata/marisa-trie).
