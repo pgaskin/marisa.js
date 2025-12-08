@@ -1,9 +1,10 @@
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { argv } from 'node:process'
 import { fileURLToPath } from 'node:url'
 
-const [module, version, sum] = process.argv.slice(2)
+const [module, version, sum] = argv.slice(2)
 
 const result = JSON.parse(execFileSync('go', ['mod', 'download', '-json', `${module}@${version}`], {
     encoding: 'utf-8',

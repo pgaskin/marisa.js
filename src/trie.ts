@@ -118,7 +118,7 @@ export class Trie {
    * are accumulated.
    */
   static async build(values: Iterable<string | { toString(): string }, void, void>, cfg?: Config): Promise<Trie> {
-    let flags = 0
+    const flags = 0
       | numTriesFlag(cfg?.numTries)
       | cacheLevelFlag(cfg?.cacheLevel)
       | tailModeFlag(cfg?.tailMode)

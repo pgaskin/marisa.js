@@ -1,4 +1,4 @@
-// @ts-expect-error
+// @ts-expect-error will be bundled
 import wasm from './marisa.wasm'
 
 export interface MarisaInstance extends WebAssembly.Instance {
@@ -46,11 +46,11 @@ export interface MarisaImports extends WebAssembly.Imports {
 const module = compile(new URL(wasm, import.meta.url))
 
 async function compile(url: URL) {
-  // @ts-expect-error
+  // @ts-expect-error nodejs check since fetch doesn't do file urls (nodejs/node#48554)
   if (typeof window === 'undefined' && typeof process !== "undefined" && process.versions != null && process.versions.node != null && url.protocol === 'file:') {
-    // @ts-expect-error
+    // @ts-expect-error ...
     const { readFileSync } = await import('node:fs')
-    // @ts-expect-error
+    // @ts-expect-error ...
     const { fileURLToPath } = await import('node:url')
     return WebAssembly.compile(readFileSync(fileURLToPath(url)))
   } else {
