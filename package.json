@@ -21,6 +21,7 @@
   },
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "node src/fetch.js github.com/pgaskin/go-marisa v1.0.2 h1:m8MsdiHsWFl5FeaIhcQU8ubejQyMSVakE/7uBYLOeMY= && tsc && esbuild --bundle --format=esm --platform=neutral --tsconfig=tsconfig.json --target=es2022 --sourcemap --loader:.wasm=file --outfile=dist/index.js --external:node:* src/index.ts",
     "test": "node --test"
