@@ -32,5 +32,15 @@
   },
   "engines": {
     "node": ">= 22"
-  }
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "chrome >= 90",
+    "firefox >= 90",
+    "edge >= 90",
+    "opera >= 75",
+    "safari >= 15.1",
+    "ios >= 14.8",
+    "node >= 22"
+  ]
 }
