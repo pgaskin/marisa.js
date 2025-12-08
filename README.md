@@ -39,12 +39,12 @@ const trie = await Trie.build(letters())
 
 let id = trie.lookup('aaa')
 if (id == null) {
-    fmt.Println('not found')
+    console.log('not found')
 }
 
 let key = trie.reverseLookup(id)
 if (key == null) {
-    fmt.Println('not found')
+    console.log('not found')
 }
 
 console.log('lookup', id, key)
