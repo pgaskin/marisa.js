@@ -13,7 +13,7 @@ function *letters() {
     }
 }
 
-test('letters', async t => {
+test('letters', async t => { // eslint-disable-line @typescript-eslint/no-unused-vars
     const trie = await Trie.build(letters(), {
         numTries: 3,
         cacheLevel: 'normal',
@@ -43,7 +43,7 @@ test('letters', async t => {
     assert.strictEqual(n, trie.size)
 
     n = 0
-    for (const _ of trie.dump()) {
+    for (const _ of trie.dump()) { // eslint-disable-line @typescript-eslint/no-unused-vars
         n++
     }
     assert.strictEqual(n, trie.size)
@@ -59,7 +59,7 @@ test('letters', async t => {
     assert.strictEqual(trie.lookup('sdfsdfsdf'), null)
 
     assert.throws(() => {
-        trie.writeToSync(data => {
+        trie.writeToSync(data => { // eslint-disable-line @typescript-eslint/no-unused-vars
             throw new Error('test')
         })
     }, new Error('test'))

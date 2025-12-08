@@ -14,7 +14,7 @@ export interface Config {
 
 const keyWeight = Symbol('keyWeight')
 
-export function key(key: string, weight: number = 1.0): String {
+export function key(key: string, weight: number = 1.0): String { // eslint-disable-line @typescript-eslint/no-wrapper-object-types
   if (typeof weight !== 'number' || !isFinite(weight))
     throw new TypeError(`Weight must be a finite number`)
   return Object.defineProperty(new String(key), keyWeight, {
@@ -130,7 +130,7 @@ export class Trie {
     let ptr = trie.#alloc(step)
     for (const item of values) {
       const key = item.toString()
-      const weight = (item as any)[keyWeight] ?? 1.0
+      const weight = (item as any)[keyWeight] ?? 1.0 // eslint-disable-line @typescript-eslint/no-explicit-any
       let n: number
       while (true) {
         const stats = utf8encoder.encodeInto(key, new Uint8Array(trie.#mod!.exports.memory.buffer, ptr, alloc))

@@ -25,7 +25,7 @@ const _MARISA_NUM_TRIES_MASK = 0x0007F
 const _MARISA_CACHE_LEVEL_MASK = 0x00F80
 const _MARISA_TAIL_MODE_MASK = 0x0F000
 const _MARISA_NODE_ORDER_MASK = 0xF0000
-const _MARISA_CONFIG_MASK = 0xFFFFF
+const _MARISA_CONFIG_MASK = 0xFFFFF  // eslint-disable-line @typescript-eslint/no-unused-vars
 
 export function numTriesFlag(v?: number): number {
   if (v == null || v === 0)
@@ -52,7 +52,7 @@ export function cacheLevelFlag(v?: CacheLevel): number {
     case 'tiny':
       return _MARISA_TINY_CACHE
     default:
-      const invalid: never = v
+      const invalid: never = v // eslint-disable-line no-case-declarations
       throw new TypeError(`Invalid CacheLevel ${invalid}`)
   }
 }
@@ -66,7 +66,7 @@ export function tailModeFlag(v?: TailMode): number {
     case 'text':
       return _MARISA_TEXT_TAIL
     default:
-      const invalid: never = v
+      const invalid: never = v // eslint-disable-line no-case-declarations
       throw new TypeError(`Invalid TailMode ${invalid}`)
   }
 }
@@ -80,7 +80,7 @@ export function nodeOrderFlag(v?: NodeOrder): number {
     case 'weight':
       return _MARISA_WEIGHT_ORDER
     default:
-      const invalid: never = v
+      const invalid: never = v // eslint-disable-line no-case-declarations
       throw new TypeError(`Invalid NodeOrder ${invalid}`)
   }
 }
