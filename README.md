@@ -18,7 +18,7 @@ npm install --save marisa-trie-wasm
 
 ```html
 <script type="module">
-    import { Trie } from 'https://esm.sh/marisa-trie-wasm'
+    import { Trie } from 'https://cdn.jsdelivr.net/npm/marisa-trie-wasm'
 </script>
 ```
 
