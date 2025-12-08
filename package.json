@@ -1,6 +1,6 @@
 {
   "name": "marisa-trie-wasm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Patrick Gaskin",
   "license": "MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)",
   "description": "marisa-trie browser/node wasm bindings",
