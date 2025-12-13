@@ -64,8 +64,8 @@ test('letters', async t => { // eslint-disable-line @typescript-eslint/no-unused
         })
     }, new Error('test'))
 
-    assert.deepStrictEqual(Array.from(trie).map(([, key]) => key).sort(), Array.from(letters()).sort())
-    assert.deepStrictEqual(Array.from(trie.dump()).map(([, key]) => key).sort(), Array.from(letters()).sort())
-    assert.deepStrictEqual(Array.from(trie.predictiveSearch('ab')).map(([, key]) => key).sort(), Array.from(letters()).filter(x => x.startsWith('ab')).sort())
-    assert.deepStrictEqual(Array.from(trie.commonPrefixSearch('abcde')).map(([, key]) => key).sort(), Array.from(letters()).filter(x => 'abcde'.startsWith(x)).sort())
+    assert.deepStrictEqual(trie[Symbol.iterator]().map(([, key]) => key).toArray().sort(), letters().toArray().sort())
+    assert.deepStrictEqual(trie.dump().map(([, key]) => key).toArray().sort(), letters().toArray().sort())
+    assert.deepStrictEqual(trie.predictiveSearch('ab').map(([, key]) => key).toArray().sort(), letters().filter(x => x.startsWith('ab')).toArray().sort())
+    assert.deepStrictEqual(trie.commonPrefixSearch('abcde').map(([, key]) => key).toArray().sort(), letters().filter(x => 'abcde'.startsWith(x)).toArray().sort())
 })
